@@ -1,16 +1,24 @@
-#include "SerialPort.h"
+#include "ArduinoHandler.h"
+
+using namespace std;
+
+ArduinoHandler arduinoHandler;
+
+int getMove(){
+    int* checker = arduinoHandler.getCheckerCoord();
+    // Aqui iría la función para iluminar los posibles movimientos
+    cout << "[" << checker[0] << ", " << checker[1] << "]"<< endl;
+    int* move = arduinoHandler.getMoveCoord();
+    if (*move == 9) return getMove();
+    else{
+        cout << "[" << move[0] << ", " << move[1] << ", " << move[2] << ", " << move[3] << "]"<< endl;
+        return 0;
+    }
+}
 
 int main(){
-    char num1 = 'E';
-    char num2 = 'F';
-    SerialPort serialPort;
-    serialPort.connectArduino();
-    for (int i = 0; i < 20; ++i) {
-        //serialPort.readData();
-        serialPort.getKey();
-    }
-    serialPort.writeData(num1);
-    serialPort.writeData(num2);
-    serialPort.closeSerial();
+    getMove();
+    arduinoHandler.atackLed();
+    arduinoHandler.closeSerial();
     return 0;
 }

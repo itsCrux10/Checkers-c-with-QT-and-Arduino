@@ -6,31 +6,34 @@
 // Linux headers
 #include <fcntl.h> // Contains file controls like O_RDWR
 #include <errno.h> // Error integer and strerror() function
-#include <termios.h> // Contains POSIX terminal control definitions
 #include <unistd.h> // write(), read(), close()
 
-int SerialPort::connectArduino() {
+int SerialPort::connectSerial() {
     serial_port = open("/dev/ttyACM0", O_RDWR);
 
 // Check for errors
     if (serial_port < 0) {
         printf("Error %i from open: %s\n", errno, strerror(errno));
+        return -1;
     }
+    cout << "<<< Connection with Arduino was successfully correct >>>" << endl;
+    return 0;
 }
 
 char SerialPort::readData(){
     char buffer;
-    read(serial_port, &buffer, sizeof(char));
-    //cout << "Key: " << buffer << endl;
+    int n = read(serial_port, &buffer, sizeof(char));
     return buffer;
 }
 
-int SerialPort::getKey() {
-    cout << "Key Presionada: " << readData() << endl;
+char SerialPort::getKey() {
+    char key = readData();
+    cout << "Key Presionada: " << key << endl;
+
     for (int i = 0; i < 2; ++i) {
         readData();
     }
-    return 0;
+    return key;
 }
 
 int SerialPort::writeData(char data){
@@ -41,4 +44,5 @@ int SerialPort::writeData(char data){
 
 int SerialPort::closeSerial() {
     close(serial_port);
+    cout << "<<< Connection with Arduino was successfully closed >>>" << endl;
 }

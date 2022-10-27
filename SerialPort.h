@@ -12,11 +12,13 @@ class SerialPort
 private:
     int serial_port;
 public:
-    int connectArduino();
-    char readData();
+    int connectSerial();
     int writeData(char data);
     int closeSerial();
-    int getKey();
+    char getKey();
+
+private:
+    char readData();
 };
 
 #endif //PROYECTO_2_SERIALPORT_H

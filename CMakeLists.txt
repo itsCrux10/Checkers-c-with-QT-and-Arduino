@@ -3,4 +3,4 @@ project(Proyecto_2)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Damas.exe main.cpp SerialPort.cpp SerialPort.h)
+add_executable(Damas.exe main.cpp SerialPort.cpp SerialPort.h ArduinoHandler.cpp ArduinoHandler.h)

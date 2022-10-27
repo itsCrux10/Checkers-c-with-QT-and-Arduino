@@ -2,7 +2,6 @@
 #include <Keypad.h>
 
 int ATACK_LED = 12; //red led
-int DAMAGE_LED = 11; //green led
 const int ROW_NUM = 4; //four rows
 const int COLUMN_NUM = 4; //four columns
 
@@ -21,24 +20,12 @@ Keypad keypad = Keypad( makeKeymap(keys), pin_rows, pin_column, ROW_NUM, COLUMN_
 void setup(){
   Serial.begin(9600);
   pinMode(ATACK_LED, OUTPUT);
-  pinMode(DAMAGE_LED, OUTPUT);
-  digitalWrite(ATACK_LED, HIGH);
-  digitalWrite(DAMAGE_LED, HIGH);
 }
 
 void loop(){
-  Serial.flush();
   char key = keypad.getKey();
-
-  if (key){
-    Serial.println(key);
-  }
-
+  if (key)Serial.println(key);
   char value = Serial.read();
-  if (value == 'E'){
-    digitalWrite(ATACK_LED, LOW);
-  }
-  if (value == 'F'){
-    digitalWrite(DAMAGE_LED, LOW);
-  }  
+  if (value == 'E')digitalWrite(ATACK_LED, HIGH);
+  if (value == 'F')digitalWrite(ATACK_LED, LOW);
 }
