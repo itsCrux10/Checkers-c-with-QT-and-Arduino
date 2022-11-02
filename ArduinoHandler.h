@@ -14,10 +14,6 @@ using namespace std;
 
 class ArduinoHandler {
 public:
-    //SerialPort serialPort;
-    //int checkerCoord[2];
-    //int moveCoord[4];
-
     ArduinoHandler();
     int* getCheckerCoord();
     int* getMoveCoord();
@@ -28,6 +24,5 @@ private:
     int turnOnLight();
     int turnOffLight();
 };
-
 
 #endif //PROYECTO_2_ARDUINOHANDLER_H
