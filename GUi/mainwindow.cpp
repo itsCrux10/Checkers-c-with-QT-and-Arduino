@@ -11,6 +11,8 @@ MainWindow::MainWindow(QWidget *parent) : QGraphicsView(parent)
     gamescene->setSceneRect(0,0,1400,900);
 
     setFixedSize(1400,900);
+    setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setScene(gamescene);
     QBrush brush;
     brush.setStyle(Qt::SolidPattern);
@@ -27,6 +29,9 @@ MainWindow::MainWindow(QWidget *parent) : QGraphicsView(parent)
     turnDisplay->setFont(QFont("",18));
     turnDisplay->setPlainText("Turn : WHITE");
 
+
+
+
 }
 
 void MainWindow::addToScene(QGraphicsItem *item)
@@ -37,8 +42,9 @@ void MainWindow::addToScene(QGraphicsItem *item)
 
 void MainWindow::drawCheckerBoard(){
     checkers= new CheckerBoard;
-   drawStatsHolder(600,0, Qt::green);
-   checkers->drawBox(400,50 );
+   drawStatsHolder(1110,0, Qt::darkBlue);
+   checkers->drawBox(1400/2-400,50 );
+
 }
 
 
@@ -49,8 +55,35 @@ void MainWindow::drawStatsHolder(int x, int y, QColor color)
     brush.setStyle(Qt::SolidPattern);
     brush.setColor(color);
     statHolder->setBrush(brush);
-    addToScene(statHolder);
+    setBackgroundBrush(brush);
 }
+
+void MainWindow::changeTurn()
+{
+    if(getTurn() == "WHITE")
+        setTurn("BLACK");
+    else
+        setTurn("WHITE");
+    turnDisplay->setPlainText("Turn : " + getTurn());
+}
+
+void MainWindow::removeFromScene(QGraphicsItem *item)
+{
+    gamescene->removeItem(item);
+
+}
+
+QString MainWindow::getTurn()
+{
+    return turn;
+}
+
+void MainWindow::setTurn(QString value)
+{
+    turn = value;
+}
+
+
 
 void MainWindow::start()
 {
@@ -77,31 +110,24 @@ void MainWindow::start()
     checkers->addChessPiece();
 }
 
-
 void MainWindow::displayMainMenu()
 {
-    QGraphicsPixmapItem *p = new QGraphicsPixmapItem();
-    p->setPixmap(QPixmap(":/images/king1.png"));
-    p->setPos(420,170);
-    addToScene(p);
-    listG.append(p);
 
-    QGraphicsPixmapItem *p1 = new QGraphicsPixmapItem();
-    p1->setPixmap(QPixmap(":/images/king.png"));
-    p1->setPos(920,170);
-    addToScene(p1);
-    listG.append(p1);
     //Create the title
-    QGraphicsTextItem *titleText = new QGraphicsTextItem("Chess Pro");
+    QGraphicsTextItem *titleText = new QGraphicsTextItem("Checkers");
     QFont titleFont("arial" , 50);
     titleText->setFont( titleFont);
+    titleText->setDefaultTextColor(Qt::darkGray);
+
     int xPos = width()/2 - titleText->boundingRect().width()/2;
     int yPos = 150;
     titleText->setPos(xPos,yPos);
     addToScene(titleText);
     listG.append(titleText);
+
+
     //create Button
-    Button * playButton = new Button("Play 2 v 2");
+    Button * playButton = new Button("Play 1 vs PC");
     int pxPos = width()/2 - playButton->boundingRect().width()/2;
     int pyPos = 300;
     playButton->setPos(pxPos,pyPos);
@@ -120,7 +146,6 @@ void MainWindow::displayMainMenu()
     listG.append(quitButton);
 }
 
-
 void MainWindow::gameOver()
 {
     //removeAll();
@@ -128,7 +153,6 @@ void MainWindow::gameOver()
     alivePiece.clear();
     checkers->reset();
 }
-
 
 void MainWindow::removeAll(){
     QList<QGraphicsItem*> itemsList = gamescene->items();

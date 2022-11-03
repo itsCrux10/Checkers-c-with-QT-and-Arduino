@@ -2,7 +2,7 @@
 #include "mainwindow.h"
 #include <QDebug>
 
-extern MainWindow *MainWindow;
+extern class MainWindow *mainWindow;
 
 CheckersBox::CheckersBox(QGraphicsItem *parent):QGraphicsRectItem(parent)
 {
@@ -25,19 +25,19 @@ void CheckersBox::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
       //  qDebug() << getChessPieceColor();
         //Deselecting counter part of ChessPiece
-        if(currentPiece == MainWindow->piecetomove && currentPiece){
+        if(currentPiece == mainWindow->piecetomove && currentPiece){
 
             currentPiece->mousePressEvent(event);
             return;
         }
 
         //if selected
-        if(MainWindow->piecetomove){
+        if(mainWindow->piecetomove){
             //if same team
-            if(this->getChessPieceColor() == MainWindow->piecetomove->getSide())
+            if(this->getChessPieceColor() == mainWindow->piecetomove->getSide())
                 return;
             //removing the eaten piece
-            QList <CheckersBox *> movLoc = MainWindow->piecetomove->moveLocation();
+            QList <CheckersBox *> movLoc = mainWindow->piecetomove->moveLocation();
             //TO make sure the selected box is in move zone
             int check = 0;
             for(size_t i = 0, n = movLoc.size(); i < n;i++) {
@@ -50,9 +50,9 @@ void CheckersBox::mousePressEvent(QGraphicsSceneMouseEvent *event)
             if(check == 0)
                 return;
             //change the color back to normal
-             MainWindow->piecetomove->decolor();
+             mainWindow->piecetomove->decolor();
              //make the first move false applicable for pawn only
-             MainWindow->piecetomove->firstMove = false;
+             mainWindow->piecetomove->firstMove = false;
              //this is to eat or consume the enemy present inn the movable region
             if(this->getHasChekcerPiece()){
                 this->currentPiece->setIsPlaced(false);
@@ -61,14 +61,14 @@ void CheckersBox::mousePressEvent(QGraphicsSceneMouseEvent *event)
 
             }
             //changing the new stat and resetting the previous left region
-            MainWindow->piecetomove->getCurrentBox()->setHasCheckerPiece(false);
-            MainWindow->piecetomove->getCurrentBox()->currentPiece = NULL;
-            MainWindow->piecetomove->getCurrentBox()->resetOriginalColor();
-            placePiece(MainWindow->piecetomove);
+            mainWindow->piecetomove->getCurrentBox()->setHasCheckerPiece(false);
+            mainWindow->piecetomove->getCurrentBox()->currentPiece = NULL;
+            mainWindow->piecetomove->getCurrentBox()->resetOriginalColor();
+            placePiece(mainWindow->piecetomove);
 
-            MainWindow->piecetomove = NULL;
+            mainWindow->piecetomove = NULL;
             //changing turn
-            MainWindow->changeTurn();
+            mainWindow->changeTurn();
             checkForCheck();
         }
         //Selecting couterpart of the chessPiece
@@ -107,6 +107,15 @@ void CheckersBox::setOriginalColor(QColor value)
     setColor(originalColor);
 }
 
+
+void CheckersBox::checkForCheck()
+{
+
+
+
+}
+
+
 bool CheckersBox::getHasChekcerPiece()
 {
     return hasChessPiece;
@@ -126,6 +135,10 @@ void CheckersBox::setCheckerPieceColor(QString value)
     chessPieceColor = value;
 }
 
+QString CheckersBox::getChessPieceColor()
+{
+    return chessPieceColor;
+}
 
 
 

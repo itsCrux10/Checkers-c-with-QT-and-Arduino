@@ -42,10 +42,6 @@ public:
 
 public slots:
     void start();
-
-
-
-
 private:
     QGraphicsScene *gamescene;
     QList <checkerspiece *> whiteDead;

@@ -1,7 +1,9 @@
 #include "checkerspiece.h"
+#include "checkersbox.h"
 #include "mainwindow.h"
+#include "piece.h"
+extern class MainWindow *mainWindow;
 
-extern MainWindow *MainWindow;
 checkerspiece::checkerspiece(QString team, QGraphicsItem *parent):QGraphicsPixmapItem(parent)
 {
     side = team;
@@ -12,24 +14,24 @@ checkerspiece::checkerspiece(QString team, QGraphicsItem *parent):QGraphicsPixma
 void checkerspiece::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     //Deselect
-    if(this == MainWindow->piecetomove){
-        MainWindow->piecetomove->getCurrentBox()->resetOriginalColor();
-        MainWindow->piecetomove->decolor();
-        MainWindow->piecetomove = NULL;
+    if(this == mainWindow->piecetomove){
+        mainWindow->piecetomove->getCurrentBox()->resetOriginalColor();
+        mainWindow->piecetomove->decolor();
+        mainWindow->piecetomove = NULL;
        return;
     }
     //if it is already consumed or not the respective color's turn
-    if((!getIsPlaced() )|| ( (MainWindow->getTurn() != this->getSide())&& (!MainWindow->piecetomove)) )
+    if((!getIsPlaced() )|| ( (mainWindow->getTurn() != this->getSide())&& (!mainWindow->piecetomove)) )
         return;
     //selecting
-    if(!MainWindow->piecetomove){
+    if(!mainWindow->piecetomove){
 
-        MainWindow->piecetomove = this;
-        MainWindow->piecetomove->getCurrentBox()->setColor(Qt::red);
-        MainWindow->piecetomove->moves();
+        mainWindow->piecetomove = this;
+        mainWindow->piecetomove->getCurrentBox()->setColor(Qt::red);
+        mainWindow->piecetomove->moves();
     }
     //Consuming counterPart of the CHessBox
-    else if(this->getSide() != MainWindow->piecetomove->getSide()){
+    else if(this->getSide() != mainWindow->piecetomove->getSide()){
         this->getCurrentBox()->mousePressEvent(event);
     }
 }
@@ -76,6 +78,20 @@ void checkerspiece::decolor()
     for(size_t i = 0, n = location.size(); i < n;i++) {
          location[i]->resetOriginalColor();
     }
+}
+
+
+bool checkerspiece::boxSetting(CheckersBox *box)
+{
+    if(box->getHasChekcerPiece()) {
+
+
+            box->setColor(Qt::blue);
+        return true;
+    }
+    else
+        location.last()->setColor(Qt::darkRed);
+    return false;
 }
 
 

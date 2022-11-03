@@ -1,0 +1,205 @@
+{
+	"BUILD_DIR" : "/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi/cmake-build-debug/untitled2_autogen",
+	"CMAKE_BINARY_DIR" : "/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi/cmake-build-debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi/cmake-build-debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi",
+	"CMAKE_EXECUTABLE" : "/home/cruz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3345.126/bin/cmake/linux/bin/cmake",
+	"CMAKE_LIST_FILES" : 
+	[
+		"/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi/CMakeLists.txt",
+		"/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi/cmake-build-debug/CMakeFiles/3.23.2/CMakeSystem.cmake",
+		"/home/cruz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3345.126/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake",
+		"/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi/cmake-build-debug/CMakeFiles/3.23.2/CMakeCXXCompiler.cmake",
+		"/home/cruz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3345.126/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake",
+		"/home/cruz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3345.126/bin/cmake/linux/share/cmake-3.23/Modules/CMakeGenericSystem.cmake",
+		"/home/cruz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3345.126/bin/cmake/linux/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake",
+		"/home/cruz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3345.126/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux.cmake",
+		"/home/cruz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3345.126/bin/cmake/linux/share/cmake-3.23/Modules/Platform/UnixPaths.cmake",
+		"/home/cruz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3345.126/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXInformation.cmake",
+		"/home/cruz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3345.126/bin/cmake/linux/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake",
+		"/home/cruz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3345.126/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake",
+		"/home/cruz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3345.126/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU.cmake",
+		"/home/cruz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3345.126/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
+		"/home/cruz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3345.126/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-CXX.cmake",
+		"/home/cruz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3345.126/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU.cmake",
+		"/home/cruz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3345.126/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfig.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake",
+		"/home/cruz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3345.126/bin/cmake/linux/share/cmake-3.23/Modules/CMakeParseArguments.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSEmulatorIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsEglDeviceIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsGbmIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLibInputPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake",
+		"/home/cruz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3345.126/bin/cmake/linux/share/cmake-3.23/Modules/CMakeParseArguments.cmake"
+	],
+	"CMAKE_SOURCE_DIR" : "/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi",
+	"DEP_FILE" : "/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi/cmake-build-debug/untitled2_autogen/deps",
+	"DEP_FILE_RULE_NAME" : "untitled2_autogen/timestamp",
+	"HEADERS" : 
+	[
+		[
+			"/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi/button.h",
+			"MU",
+			"EWIEGA46WW/moc_button.cpp",
+			null
+		],
+		[
+			"/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi/checkerboard.h",
+			"MU",
+			"EWIEGA46WW/moc_checkerboard.cpp",
+			null
+		],
+		[
+			"/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi/checkersbox.h",
+			"MU",
+			"EWIEGA46WW/moc_checkersbox.cpp",
+			null
+		],
+		[
+			"/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi/checkerspiece.h",
+			"MU",
+			"EWIEGA46WW/moc_checkerspiece.cpp",
+			null
+		],
+		[
+			"/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi/mainwindow.h",
+			"MU",
+			"EWIEGA46WW/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi/piece.h",
+			"MU",
+			"EWIEGA46WW/moc_piece.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi/cmake-build-debug/untitled2_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi/cmake-build-debug/untitled2_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_WIDGETS_LIB" ],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi/cmake-build-debug",
+		"/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi",
+		"/usr/include/x86_64-linux-gnu/qt5",
+		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
+		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
+		"/usr/include/x86_64-linux-gnu/qt5/QtCore",
+		"/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
+		"/usr/include/c++/11",
+		"/usr/include/x86_64-linux-gnu/c++/11",
+		"/usr/include/c++/11/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/11/include",
+		"/usr/local/include",
+		"/usr/include/x86_64-linux-gnu",
+		"/usr/include"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/c++",
+		"-dM",
+		"-E",
+		"-c",
+		"/home/cruz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3345.126/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi/cmake-build-debug/untitled2_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 4,
+	"PARSE_CACHE_FILE" : "/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi/cmake-build-debug/CMakeFiles/untitled2_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
+	"QT_UIC_EXECUTABLE" : "/usr/lib/qt5/bin/uic",
+	"QT_VERSION_MAJOR" : 5,
+	"QT_VERSION_MINOR" : 15,
+	"SETTINGS_FILE" : "/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi/cmake-build-debug/CMakeFiles/untitled2_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi/button.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi/checkerboard.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi/checkersbox.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi/checkerspiece.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi/main.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi/mainwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi/piece.cpp",
+			"MU",
+			null
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"VERBOSITY" : 0
+}

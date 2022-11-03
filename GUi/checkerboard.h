@@ -2,11 +2,7 @@
 #define CHECKERBOARD_H
 
 #include <QGraphicsRectItem>
-#include "checkersbox.h"
 #include "checkerspiece.h"
-
-
-
 
 
 class CheckerBoard
@@ -27,8 +23,8 @@ public:
 
 private:
 
-    QList <CheckerBoard *> white;
-    QList <CheckerBoard *> black;
+    QList <checkerspiece *> white;
+    QList <checkerspiece *> black;
 
 };
 

@@ -1,9 +1,10 @@
 #include "piece.h"
+#include "checkersbox.h"
 #include "mainwindow.h"
 #include <QDebug>
 
 
-extern MainWindow *MainWindow;
+extern class MainWindow *mainWindow;
 
 
 piece::piece(QString team,QGraphicsItem *parent):checkerspiece(team,parent)
@@ -14,9 +15,9 @@ piece::piece(QString team,QGraphicsItem *parent):checkerspiece(team,parent)
 void piece::setImage()
 {
     if(side == "WHITE")
-        setPixmap(QPixmap(":/images/bishop1.png"));
+        setPixmap(QPixmap("/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi/white.png"));
     else
-        setPixmap(QPixmap(":/images/bishop.png"));
+        setPixmap(QPixmap("/home/cruz/Documents/Checkers/Checkers-c-with-QT-and-Arduino/GUi/black.png"));
 }
 
 
@@ -29,13 +30,13 @@ void piece::moves()
     //For upper Left
 
      for(int i = row-1,j = col-1; i >= 0 && j >=0; i--,j--) {
-       if(MainWindow->collection[i][j]->getChessPieceColor() == team ) {
+       if(mainWindow->collection[i][j]->getChessPieceColor() == team ) {
            break;
 
        }
        else
        {
-           location.append(MainWindow->collection[i][j]);
+           location.append(mainWindow->collection[i][j]);
            if(boxSetting(location.last()) ){
                break;
            }
@@ -45,13 +46,13 @@ void piece::moves()
      //For upper right
 
       for(int i = row-1,j = col+1; i >= 0 && j <= 7; i--,j++) {
-        if(MainWindow->collection[i][j]->getChessPieceColor() == team ) {
+        if(mainWindow->collection[i][j]->getChessPieceColor() == team ) {
             break;
 
         }
         else
         {
-            location.append(MainWindow->collection[i][j]);
+            location.append(mainWindow->collection[i][j]);
             if(boxSetting(location.last())){
                 break;
             }
@@ -61,13 +62,13 @@ void piece::moves()
       //For downward right
 
        for(int i = row+1,j = col+1; i <= 7 && j <= 7; i++,j++) {
-         if(MainWindow->collection[i][j]->getChessPieceColor() == team ) {
+         if(mainWindow->collection[i][j]->getChessPieceColor() == team ) {
              break;
 
          }
          else
          {
-             location.append(MainWindow->collection[i][j]);
+             location.append(mainWindow->collection[i][j]);
              if(boxSetting(location.last())){
                  break;
              }
@@ -77,13 +78,13 @@ void piece::moves()
        //For downward left
 
         for(int i = row+1,j = col-1; i <= 7 && j >= 0; i++,j--) {
-          if(MainWindow->collection[i][j]->getChessPieceColor() == team ) {
+          if(mainWindow->collection[i][j]->getChessPieceColor() == team ) {
               break;
 
           }
           else
           {
-              location.append(MainWindow->collection[i][j]);
+              location.append(mainWindow->collection[i][j]);
               if(boxSetting(location.last())){
                   break;
               }
