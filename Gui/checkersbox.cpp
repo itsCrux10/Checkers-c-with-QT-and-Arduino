@@ -4,6 +4,7 @@
 
 extern class MainWindow *mainWindow;
 
+//Constructor de la clase
 CheckersBox::CheckersBox(QGraphicsItem *parent):QGraphicsRectItem(parent)
 {
     //making the Square CHess Box
@@ -15,6 +16,7 @@ CheckersBox::CheckersBox(QGraphicsItem *parent):QGraphicsRectItem(parent)
     currentPiece = NULL;
 }
 
+//destructor de la clase
 CheckersBox::~CheckersBox()
 {
     delete this;
@@ -78,13 +80,14 @@ void CheckersBox::mousePressEvent(QGraphicsSceneMouseEvent *event)
         }
 }
 
-
+//Funcion para pintar de cierto colo la pieza del tablero
 void CheckersBox::setColor(QColor color)
 {
     brush.setColor(color);
     setBrush(color);
 }
 
+//Funcion para colocar una pieza de juego en una cuadricula del tablero de juego
 void CheckersBox::placePiece(checkerspiece *piece)
 {
 
@@ -96,18 +99,20 @@ void CheckersBox::placePiece(checkerspiece *piece)
 
 }
 
+//Funcion para devolver al color original la cuadricula del tablero de juego
 void CheckersBox::resetOriginalColor()
 {
     setColor(originalColor);
 }
 
+//Funcion para definir el color original de la cuadricula
 void CheckersBox::setOriginalColor(QColor value)
 {
     originalColor = value;
     setColor(originalColor);
 }
 
-
+//FUncion vacia
 void CheckersBox::checkForCheck()
 {
 
@@ -115,12 +120,13 @@ void CheckersBox::checkForCheck()
 
 }
 
-
+//Funcion que consulta si existe alguna pieza coloda en la cuadricula de juego
 bool CheckersBox::getHasChekcerPiece()
 {
     return hasChessPiece;
 }
 
+//Funcion encargada de establecer si existe alguna pieza en el lugar
 void CheckersBox::setHasCheckerPiece(bool value, checkerspiece *piece)
 {
     hasChessPiece = value;
@@ -130,11 +136,13 @@ void CheckersBox::setHasCheckerPiece(bool value, checkerspiece *piece)
         setCheckerPieceColor("NONE");
 }
 
+//FUncion que detecta de que color es la pieza seleccionada
 void CheckersBox::setCheckerPieceColor(QString value)
 {
     chessPieceColor = value;
 }
 
+//Funcion para obtener el color de la pieza seleccionada
 QString CheckersBox::getChessPieceColor()
 {
     return chessPieceColor;

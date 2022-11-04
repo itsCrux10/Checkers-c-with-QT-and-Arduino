@@ -9,10 +9,13 @@ using namespace std;
 
 extern class MainWindow *mainWindow;
 
+//Constructor de la clase
 CheckerBoard::CheckerBoard(){
     setUpBlack();
     setUpWhite();
 }
+
+//Funcion encargada de dibujar el tablero de juego
 void CheckerBoard::drawBox(int x, int y){
     int ss = 100;
     for(int i = 0; i < 8; i++) {
@@ -33,6 +36,7 @@ void CheckerBoard::drawBox(int x, int y){
 
 }
 
+//Funcion encargada de guardar las piezas de juego en las cuadriculas del campo de juego
 void CheckerBoard::addChessPiece() {
 
     for(int i = 0; i < 8; i++) {
@@ -89,6 +93,7 @@ void CheckerBoard::addChessPiece() {
  }
 }
 
+//Funcion la cual define la cantidad de piezas blancas
 void CheckerBoard::setUpWhite()
 {
         checkerspiece *checkerw;
@@ -99,7 +104,7 @@ void CheckerBoard::setUpWhite()
             }
         }
 
-
+//Funcion la cual define la cantidad de piezas negras
 void CheckerBoard::setUpBlack()
 {
     checkerspiece *checkerb;
@@ -110,7 +115,7 @@ void CheckerBoard::setUpBlack()
         }
 }
 
-
+//Funcion para devolver a estado original a los elementos de juego
 void CheckerBoard::reset() {
     int k = 0; int h = 0;
     for(int i = 0; i < 8; i++) {

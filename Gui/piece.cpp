@@ -13,6 +13,7 @@ piece::piece(QString team,QGraphicsItem *parent):checkerspiece(team,parent)
     setImage();
 
 }
+
 //Se selecciona una imagen a cargar
 void piece::setImage()
 {
@@ -21,7 +22,6 @@ void piece::setImage()
     else
         setPixmap(QPixmap("/home/cruz/Downloads/Checkers-c-with-QT-and-Arduino-master/Gui/black.png"));
 }
-
 
 //FUncion que determina los movimientos de la pieza
 void piece::moves()

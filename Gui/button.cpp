@@ -2,7 +2,7 @@
 #include <QGraphicsTextItem>
 #include <QBrush>
 
-
+//Constructor de la clase
 Button::Button(QString name, QGraphicsItem *parent):QGraphicsRectItem(parent)
 {
     //draw the rect
@@ -24,6 +24,7 @@ Button::Button(QString name, QGraphicsItem *parent):QGraphicsRectItem(parent)
 
 }
 
+//Funcion para saber si el boton es presionado
 void Button::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     if(event)
@@ -31,6 +32,7 @@ void Button::mousePressEvent(QGraphicsSceneMouseEvent *event)
 
 }
 
+//Funcion para definir estilo del boton
 void Button::hoverEnterEvent(QGraphicsSceneHoverEvent *event)
 {
     //change color
@@ -42,6 +44,7 @@ void Button::hoverEnterEvent(QGraphicsSceneHoverEvent *event)
     }
 }
 
+//Funcion para cambiar el color dle boton
 void Button::hoverLeaveEvent(QGraphicsSceneHoverEvent *event) {
     //change color
     if(event){
