@@ -17,9 +17,9 @@ piece::piece(QString team,QGraphicsItem *parent):checkerspiece(team,parent)
 void piece::setImage()
 {
     if(side == "WHITE")
-        setPixmap(QPixmap("/home/cruz/Downloads/Checkers-c-with-QT-and-Arduino-master/GUi/white.png"));
+        setPixmap(QPixmap("/home/cruz/Downloads/Checkers-c-with-QT-and-Arduino-master/Gui/white.png"));
     else
-        setPixmap(QPixmap("/home/cruz/Downloads/Checkers-c-with-QT-and-Arduino-master/GUi/black.png"));
+        setPixmap(QPixmap("/home/cruz/Downloads/Checkers-c-with-QT-and-Arduino-master/Gui/black.png"));
 }
 
 
@@ -32,65 +32,73 @@ void piece::moves()
     QString team = this->getSide();
     //Arriba a la izquierda
 
-    if(int i = row-1 && j = col-1) {
-       if(mainWindow->collection[i][j]->getChessPieceColor() == team ) {
-           break;
-       }
-       else
-       {
-           location.append(mainWindow->collection[i][j]);
-           if(boxSetting(location.last()) ){
-               break;
-           }
-       }
+    if(int i = row-1 ) {
+        if (int j = col-1){
+            if(mainWindow->collection[i][j]->getChessPieceColor() == team ) {
+                return;
+            }
+            else
+            {
+                location.append(mainWindow->collection[i][j]);
+                if(boxSetting(location.last()) ){
+                    return;
+                }
+            }
+        }
     }
 
      //arriba a la derecha
 
-    if(int i = row-1 && j = col+1){
-        if(mainWindow->collection[i][j]->getChessPieceColor() == team ) {
-            break;
+    if(int i = row-1){
+        if(int j = col+1){
+            if(mainWindow->collection[i][j]->getChessPieceColor() == team ) {
+                return;
 
-        }
-        else if()
-        {
-            location.append(mainWindow->collection[i][j]);
-            if(boxSetting(location.last())){
-                break;
+            }
+            else
+            {
+                location.append(mainWindow->collection[i][j]);
+                if(boxSetting(location.last())){
+                    return;
+                }
             }
         }
      }
 
       //Abajo a la derecha
 
-    if(int i = row+1 && j = col+1) {
-         if(mainWindow->collection[i][j]->getChessPieceColor() == team ) {
-             break;
+    if(int i = row+1 ) {
+        if(int j = col+1){
+            if(mainWindow->collection[i][j]->getChessPieceColor() == team ) {
+                return;
 
-         }
-         else
-         {
-             location.append(mainWindow->collection[i][j]);
-             if(boxSetting(location.last())){
-                 break;
-             }
-         }
+            }
+            else
+            {
+                location.append(mainWindow->collection[i][j]);
+                if(boxSetting(location.last())){
+                    return;
+                }
+            }
+        }
       }
 
        //Abajo a la izquierda
 
-    if(int i = row+1 && j = col-1) {
-          if(mainWindow->collection[i][j]->getChessPieceColor() == team ) {
-              break;
+    if(int i = row+1 ) {
+        if(int j = col -1){
+            if(mainWindow->collection[i][j]->getChessPieceColor() == team ) {
+                return;
 
-          }
-          else
-          {
-              location.append(mainWindow->collection[i][j]);
-              if(boxSetting(location.last())){
-                  break;
-              }
+            }
+            else
+            {
+                location.append(mainWindow->collection[i][j]);
+                if(boxSetting(location.last())){
+                    return;
+                }
 
-          }
+            }
+        }
        }
 }
