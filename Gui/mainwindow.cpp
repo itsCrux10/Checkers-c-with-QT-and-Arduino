@@ -1,19 +1,22 @@
 #include "mainwindow.h"
 #include <QPixmap>
-#include<QDebug>
-#include<QGraphicsScene>
-#include<QGraphicsView>
+#include <QDebug>
+#include <QGraphicsScene>
+#include <QGraphicsView>
 #include "button.h"
 #include "ArduinoHandler.h"
+#include "Backtracking.cpp"
 
 ArduinoHandler arduinoHandler;
+Backtracking* backtracking;
 
 //Constructor de la clase main Window
 MainWindow::MainWindow(QWidget *parent) : QGraphicsView(parent)
 {
+    backtracking = new Backtracking;
+    backtracking->fillboard();
     gamescene= new QGraphicsScene();
     gamescene->setSceneRect(0,0,1400,900);
-
 
     setFixedSize(1400,900);
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -39,13 +42,13 @@ MainWindow::MainWindow(QWidget *parent) : QGraphicsView(parent)
 
 }
 
-//Funcion utilizada para aniadir a la escena objetos de qt
+//Función utilizada para aniadir a la escena objetos de qt
 void MainWindow::addToScene(QGraphicsItem *item)
 {
     gamescene->addItem(item);
 }
 
-//Funcion encargada de crear el tablero de juego
+//Función encargada de crear el tablero de juego
 void MainWindow::drawCheckerBoard(){
     checkers= new CheckerBoard;
    drawStatsHolder(1110,0, Qt::darkBlue);
@@ -53,7 +56,7 @@ void MainWindow::drawCheckerBoard(){
 
 }
 
-//Funcion la cual se encarga de "crear" el fondo
+//Función la cual se encarga de "crear" el fondo
 void MainWindow::drawStatsHolder(int x, int y, QColor color)
 {
     statHolder = new QGraphicsRectItem(QRectF(x,y,300,900));
@@ -64,7 +67,7 @@ void MainWindow::drawStatsHolder(int x, int y, QColor color)
     setBackgroundBrush(brush);
 }
 
-//Funcion encargada de cambiar de turno
+//Función encargada de cambiar de turno
 void MainWindow::changeTurn()
 {
     if(getTurn() == "WHITE")
@@ -74,26 +77,26 @@ void MainWindow::changeTurn()
     turnDisplay->setPlainText("Turn : " + getTurn());
 }
 
-//Funcion encargada de remover de escena  objetos
+//Función encargada de remover de escena  objetos
 void MainWindow::removeFromScene(QGraphicsItem *item)
 {
     gamescene->removeItem(item);
 
 }
 
-//Metodo para obtener el turno
+//Método para obtener el turno
 QString MainWindow::getTurn()
 {
     return turn;
 }
 
-//MEtodo para defenir de quien es el turno
+//Método para definir de quien es el turno
 void MainWindow::setTurn(QString value)
 {
     turn = value;
 }
 
-//Funcion que da inicio a los elementos de la pantalla de juego
+//Función que da inicio a los elementos de la pantalla de juego
 void MainWindow::start()
 {
     for(size_t i =0, n = listG.size(); i < n; i++)
@@ -246,15 +249,12 @@ void MainWindow::start()
     indexH->setFont(QFont("",20));
     indexH->setPlainText("H");
     addToScene(indexH);
-
-
-
+    //getMove();
 }
 
-//Funcion encargada de mostrar en pantalla el menu de inicio
+//Función encargada de mostrar en pantalla el menu de inicio
 void MainWindow::displayMainMenu()
 {
-
     //Create the title
     QGraphicsTextItem *titleText = new QGraphicsTextItem("Checkers");
     QFont titleFont("arial" , 50);
@@ -311,11 +311,14 @@ int MainWindow::getMove(){
 
     int* checker = arduinoHandler.getCheckerCoord();
     // Aqui iría la función para iluminar los posibles movimientos
-    cout << "[" << checker[0] << ", " << checker[1] << "]"<< endl;
+    cout << "Ficha seleccionada dentro del tablero [" << checker[0] << ", " << checker[1] << "]"<< endl;
     int* move = arduinoHandler.getMoveCoord();
     if (*move == 9) return getMove();
     else{
-        cout << "[" << move[0] << ", " << move[1] << ", " << move[2] << ", " << move[3] << "]"<< endl;
+        cout << "Movimiento escogido por el jugador [" << move[0] << ", " << move[1] << ", " << move[2] << ", " << move[3] << "]"<< endl;
+        backtracking->updateBoard(move);
+        int* iaMove = backtracking->chooseMove();
+        cout << "El movimiento arrojado por backtracking es: [" << iaMove[0] << ", " << iaMove[1] << ", " << iaMove[2] << ", " << iaMove[3] << "]"<< endl;
         return 0;
     }
 }
