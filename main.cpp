@@ -6,8 +6,8 @@ ArduinoHandler arduinoHandler;
 
 int getMove(){
     int* checker = arduinoHandler.getCheckerCoord();
-    // Aqui iría la función para iluminar los posibles movimientos
-    cout << "[" << checker[0] << ", " << checker[1] << "]"<< endl;
+    // Aquí iría la función para iluminar los posibles movimientos
+    cout << "[" << checker[0] << ", " << checker[1] << "]" << endl;
     int* move = arduinoHandler.getMoveCoord();
     if (*move == 9) return getMove();
     else{
